@@ -4,11 +4,32 @@
              xmlns:local="clr-namespace:ArithmeticOperationusingGrid"
              x:Class="ArithmeticOperationusingGrid.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid RowSpacing="10"
+          ColumnSpacing="10">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Text="Enter num1:" Grid.Row="0" Grid.Column="0" />
+        <Entry x:Name="num1" Placeholder="Enter number:" Grid.Row="0" Grid.Column="1"/>
+        <Label Text="Enter num2:" Grid.Row="1" Grid.Column="0"/>
+        <Entry x:Name="num2" Placeholder="Enter number:" Grid.Row="1" Grid.Column="1"/>
+        <Label Text="Result is:" Grid.Row="2" Grid.Column="0"/>
+        <Label  x:Name="res" Text="Result is:"  Grid.Row="2" Grid.Column="1"/>
+        <Button x:Name="BtnAdd" Grid.Row="3" Grid.Column="0" Text="Addition" Clicked="BtnAdd_Clicked"/>
+        <Button x:Name="BtnSub" Grid.Row="3" Grid.Column="1" Text="Substraction" Clicked="BtnSub_Clicked"/>
+        <Button x:Name="BtnMul" Grid.Row="4" Grid.Column="0" Text="Multiplication" Clicked="BtnMul_Clicked"/>
+        <Button x:Name="BtnDiv" Grid.Row="4" Grid.Column="1" Text="Division" Clicked="BtnDiv_Clicked"/>
+        <Button x:Name="BtnRem" Grid.Row="5" Grid.Column="0" Text="Remainder" Clicked="BtnRem_Clicked"/>
+        <Button x:Name="BtnClr" Grid.Row="5" Grid.Column="1" Text="Clear" Clicked="BtnClr_Clicked"/>
+    </Grid>
 
 </ContentPage>
